@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         initial_position = transform.position;
-        GameManager.OnJumpKeyPressed.AddListener(HandleOnJumpKeyPressed);
+        InputManager.OnJumpKeyPressed.AddListener(HandleOnJumpKeyPressed);
     }
 
     void Start()

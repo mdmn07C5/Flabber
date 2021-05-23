@@ -27,25 +27,27 @@ public class Score : MonoBehaviour
         {
             instance = this;
         }
-        ScoreTrigger.OnPlayerClear.AddListener(HandleOnPlayerClear);
-        Kill.OnPlayerCollision.AddListener(HandleOnPlayerCollision);
-        GameManager.OnEscapeKeyPressed.AddListener(HandleOnEscapeKeyPressed);
+        // ScoreTrigger.OnPlayerClear.AddListener(HandleOnPlayerClear);
+        // Kill.OnPlayerCollision.AddListener(HandleOnPlayerCollision);
+        GameManager.OnPlayerScore.AddListener(HandleOnPlayerScore);
+        GameManager.OnPlayerKill.AddListener(HandleOnPlayerKill);
+        GameManager.OnPauseToggled.AddListener(HandleOnPauseToggled);
     }
 
-    void HandleOnPlayerClear(int points)
+    void HandleOnPlayerScore(int points)
     {
         score += points;
         inGameScoreText.text = score + "";
     }
 
-    void HandleOnPlayerCollision()
+    void HandleOnPlayerKill()
     {
         UpdateScore();
         score = 0;
         inGameScoreText.text = score + "";
     }
 
-    void HandleOnEscapeKeyPressed()
+    void HandleOnPauseToggled()
     {
         UpdateScore();
     }

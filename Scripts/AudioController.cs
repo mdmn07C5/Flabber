@@ -16,23 +16,25 @@ public class AudioController : MonoBehaviour
 
     void Awake()
     {
-        GameManager.OnJumpKeyPressed.AddListener(HandleOnJumpKeyPressed);
-        Kill.OnPlayerCollision.AddListener(HandleOnPlayerCollision);
-        ScoreTrigger.OnPlayerClear.AddListener(HandleOnPlayerClear);
+        GameManager.OnPlayerJump.AddListener(HandleOnPlayerJump);
+        // Kill.OnPlayerCollision.AddListener(HandleOnPlayerCollision);
+        GameManager.OnPlayerKill.AddListener(HandleOnPlayerKill);
+        GameManager.OnPlayerScore.AddListener(HandleOnPlayerScore);
+        // ScoreTrigger.OnPlayerClear.AddListener(HandleOnPlayerClear);
     }
 
-    void HandleOnJumpKeyPressed()
+    void HandleOnPlayerJump()
     {
         StartCoroutine(PlayMultipleClips(new AudioClip[] {jump, glide}));
     }
 
-    void HandleOnPlayerCollision()
+    void HandleOnPlayerKill()
     {
         StopCoroutine("PlayMultipleClips");
         StartCoroutine(PlayMultipleClips(new AudioClip[] {hit, death}));
     }
 
-    void HandleOnPlayerClear(int _)
+    void HandleOnPlayerScore(int _)
     {
         secondaryAudio.clip = score;
         secondaryAudio.Play();

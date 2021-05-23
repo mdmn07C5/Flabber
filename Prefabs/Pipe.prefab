@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 277094658558235897}
   m_Layer: 0
   m_Name: Bottom Pipe
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,10 +133,9 @@ GameObject:
   - component: {fileID: 688368242419177252}
   - component: {fileID: 8168074477202862650}
   - component: {fileID: 159578040177744380}
-  - component: {fileID: 3267752719292447228}
   m_Layer: 0
   m_Name: Top Pipe
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,18 +231,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.26, y: 1.6}
   m_EdgeRadius: 0
---- !u!114 &3267752719292447228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176202191587485467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c72ec41d6ec304886cb048f9294b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3196283410324585619
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,10 +339,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6091859763900871161}
   - component: {fileID: 7758100053999069625}
-  - component: {fileID: 4765283243923460655}
   m_Layer: 0
   m_Name: ScoreTrigger
-  m_TagString: Untagged
+  m_TagString: ScoreZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,15 +386,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.060931265, y: 1.4128531}
   m_EdgeRadius: 0
---- !u!114 &4765283243923460655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5172811649625756821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ec834bf6ca035c478b07a0db707a84c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

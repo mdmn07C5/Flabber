@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ScoreTrigger : MonoBehaviour
 {
-    public static Events.EventInt OnPlayerClear = new Events.EventInt();
+    public static Events.EventVoid OnPlayerClear = new Events.EventVoid();
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "ScoreZone")
         {
-            OnPlayerClear.Invoke(1);
+            OnPlayerClear.Invoke();
         }
     }
 }
